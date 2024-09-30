@@ -1,0 +1,5 @@
+streamlit
+transformers
+deep-translator
+langdetect
+torch

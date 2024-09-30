@@ -1,3 +1,16 @@
+import subprocess
+import sys
+
+# Function to install dependencies from requirements.txt
+def install_requirements():
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+    except subprocess.CalledProcessError as e:
+        print(f"Error installing requirements: {e}")
+
+# Call the function
+install_requirements()
+
 import streamlit as st
 from transformers import pipeline
 from deep_translator import GoogleTranslator
